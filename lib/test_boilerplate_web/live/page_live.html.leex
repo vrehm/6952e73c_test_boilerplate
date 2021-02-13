@@ -8,7 +8,7 @@
     </p>
 
     <!-- This example requires Tailwind CSS v2.0+ -->
-    <div x-data="{ isOpen: false }" class="relative inline-block text-left">
+    <div x-data="{ isOpen: false }" class="relative inline-block text-left m-8">
       <div>
         <button type="button" @click.away="isOpen = false" @click="isOpen = !isOpen" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none" id="options-menu" aria-haspopup="true" aria-expanded="true">
           Options
@@ -47,6 +47,9 @@
               Sign out
             </button>
           </form>
+          <div class="spinner" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
         </div>
       </div>
     </div>
