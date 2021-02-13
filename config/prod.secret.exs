@@ -11,10 +11,27 @@ database_url =
     For example: ecto://USER:PASS@HOST/DATABASE
     """
 
+# basic_username =
+#   System.get_env("BASIC_USERNAME") ||
+#     raise """
+#     environment variable BASIC_USERNAME is missing.
+#     For example: admin
+#     """
+
+# basic_password =
+#   System.get_env("BASIC_PASSWORD") ||
+#     raise """
+#     environment variable BASIC_PASSWORD is missing.
+#     For example: unsafepassword
+#     """
+
 config :test_boilerplate, TestBoilerplate.Repo,
   # ssl: true,
   url: database_url,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
+
+# basic_username: basic_username,
+# basic_password: basic_password
 
 secret_key_base =
   System.get_env("SECRET_KEY_BASE") ||
